@@ -1,1 +1,5 @@
-{}
+{
+  "title": "Qodex Docs",
+  "description": "Public API and developer documentation",
+  "sidebar": ["introduction", "getting-started", "api-reference"]
+}
