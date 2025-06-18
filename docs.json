@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Qodex.ai",
+  "name": "qodex.ai",
   "colors": {
     "primary": "#3B82F6"
   },
@@ -38,11 +38,12 @@
     ]
   },
   "navbar": {
-    "primary": 
+    "links": [
       {
         "type": "button",
         "label": "Dashboard",
         "href": "https://www.app.qodex.ai/dashboard"
       }
+    ]
   }
 }
