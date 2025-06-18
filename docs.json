@@ -5,11 +5,27 @@
   "colors": {
     "primary": "#3B82F6"
   },
+  "topLinks": [
+    { "title": "Demo Call with CEO", "href": "https://cal.com/siddhant-mohan/45mins?overlayCalendar=true&duration=45" },
+    { "title": "Blog", "href": "https://qodex.ai/blog" },
+    { "title": "Slack", "href": "https://your-slack-link-here" }
+  ],
   "navigation": {
-    "pages": [
-      "introduction",
-      "get-started",
-      "top-10-OWASP"
+    "groups": [
+      {
+        "group": "Get Started",
+        "pages": [
+          "introduction",
+          "getting-started",
+          "top-10-OWASP"
+        ]
+      },
+      {
+        "group": "API Reference",
+        "pages": [
+          "api-reference"
+        ]
+      }
     ]
   }
 }
