@@ -1,4 +1,249 @@
 ---
-title: "Documentation - Qodex.ai"
-description: "Documentation"
+title: "Qodex.ai Documentation"
+description: "Discover, Test & Secure Your APIs — Powered by AI"
 ---
+
+
+## **What is **[**Qodex.ai**](http://Qodex.ai)**?**
+
+[Qodex.ai](http://Qodex.ai) is an **AI-powered API testing and security platform** designed to help teams:
+
+- Instantly discover and map APIs (even if no spec exists)
+- Auto-generate functional, regression, and OWASP security tests
+- Run tests manually or through CI/CD
+- Monitor results with real-time dashboards and alerts
+- Sync test cases and test code with GitHub for full version control
+
+No scripts. No brittle tests. **Just chat with your AI QA engineer** — and start shipping with confidence.
+
+## **Getting Started with **[**Qodex.ai**](http://Qodex.ai)
+
+1️⃣ Sign up at [app.qodex.ai](https://www.app.qodex.ai/ai-agent)
+
+2️⃣ Upload API specs (Swagger, Postman) or auto-discover APIs with our SDK
+
+3️⃣ Create test scenarios using plain English
+
+4️⃣ Run tests manually, on schedule, or through CI/CD
+
+5️⃣ Monitor results and receive real-time alerts
+
+6️⃣ Sync everything with GitHub for visibility & automation
+
+## **Step 1: Import or Discover Your APIs**
+
+### **Option 1: Upload Swagger or Postman Collection**
+
+- Go to **AI Agent**
+- Click **Add a Collection** dropdown → **Import Collection **→ **Postman** or **Swagger**
+- Upload:
+  - swagger.json / swagger.yaml
+  - .postman_collection.json
+
+![Add Collection Gi](/images/Add-Collection.gif)
+
+### **Option 2: Use Qodex SDK for API Discovery**
+
+- Run this command from your backend:
+
+  ```bash
+  curl -sSL https://raw.githubusercontent.com/qodex-ai/swagger-bot/refs/heads/main/run.sh -o script.sh && chmod +x script.sh && ./script.sh --project-api-key YOUR_PROJECT_KEY
+  ```
+
+This generates a live Swagger spec from your running server and auto-imports it into Qodex.
+
+- Works with Node.js, Rails, Python, etc.
+- Auto-discovers all APIs \+ methods
+
+## **Step 2: Creating Test Scenarios**
+
+### **Method A: Using AI Agent**
+
+- From **AI Agent**, start a chat:
+
+  → _“Test login with valid and invalid credentials”_
+
+  → _“Check token expiry for protected routes”_
+- Qodex will:
+
+  → Generate Test Scenarios
+
+  → Generate Test Cases
+
+  → Propose Test Rules
+
+  → Perform API chaining (if needed)
+- AI may ask follow-ups (for missing params or tokens).
+- Save scenarios — available in **Test Scenarios** tab in the top right.
+
+![Generate Ts Ai Agent Gi](/images/generate-ts-ai-agent.gif)
+
+### **Method B: Manually in Test Scenarios**
+
+- Click **Test Scenarios** in the header
+- Click **Add new test scenario** → Choose:
+  - **Create with AI**
+  - **Create Manually**
+- If **Manual**:
+  - → Add Scenario Title
+  - → Choose API Collection & Endpoint
+  - → Click **Create Request Data** to generate full request details
+  - → Add custom Test Rules (AI or manual)
+
+![Ts Manual Gi](/images/ts-manual.gif)
+
+## **Step 3: Request Data & Test Rules**
+
+### **Generating Request Data:**
+
+- In each test scenario:
+
+  Click **Create Request Data** (top-right)
+
+  → Qodex generates:
+  - Method
+  - Path
+  - Headers / Auth
+  - Params
+  - Request Body
+
+If AI needs more info, it will prompt you during setup.
+
+### **Adding Test Rules:**
+
+- Scroll to **Test Rules** inside each test case
+- You can:
+  - Select from **Suggested** rules
+  - Write custom rules in **Plain English** (converted to JS)
+
+**Examples:**
+
+- _“Expect status code 200”_
+- _“Verify token is not expired”_
+- _“Validate response contains user_id”_
+
+## **Step 4: Organizing Your Tests**
+
+### **Test Suites:**
+
+Group related scenarios (Auth, Payment, User Mgmt).
+
+→ Select active test scenarios → Click **\+ Add to Test Suite**
+
+### **Test Plans:**
+
+Automate recurring runs:
+
+- Select Test Suite(s)
+- Create new **Test Plan**
+- Set Schedule:
+
+  →Daily
+
+  → Weekly
+
+  → On Deploy
+- Configure Alerts:
+
+  → Slack
+
+  → Email
+
+  → Webhook
+
+Qodex will now run tests per schedule and notify on issues.
+
+## **Step 5: Running Tests**
+
+### **Option A: In-App**
+
+- Go to **Test Scenarios** or **Test Suites**
+- Click **Run**
+- Select environment
+- View results in **Build Tab** or **Build Reports**
+
+### **Option B: CLI**
+
+```bash
+qodex test run --env=.env.staging
+```
+
+### **Option C: CI/CD**
+
+Supports GitHub Actions, Jenkins, CircleCI:
+
+```yaml
+- name: Run Qodex Tests
+  run: qodex test run --env=.env.prod
+```
+
+## **Step 6: Code Visibility & GitHub Sync**
+
+### **Viewing Code:**
+
+- Go to **Test Scenarios**
+- Open any scenario → click **Code tab**
+- View / edit YAML or JavaScript for the test
+
+### **Syncing to GitHub:**
+
+- Go to **Test Scenarios**
+- Click **Sync to GitHub **on the top right
+
+  → Exports to /tests/qodex/
+
+  → Enables version control & team review
+
+  → Allows CI/CD execution
+
+## **Dashboards & Reports**
+
+- **Coverage Metrics** — % API covered
+- **Pass/Fail Rate** — by environment
+- **Run History** — compare builds
+- **Alerts** — real-time Slack & Email notifications
+
+## **Security Testing**
+
+Qodex auto-generates tests for:
+
+- OWASP Top 10
+- Broken Access Control
+- Auth & Token misuse
+- Logic Flaws
+- Rate limits & edge cases
+
+**50\+ Security Test Templates available**
+
+## **Monitoring & Notifications**
+
+**Set alerts on:**
+
+- Test Failures
+- Flaky Tests
+- Slow Responses
+- Auth Errors
+
+**Alerts can be routed to:**
+
+- Slack
+- Email
+- Webhooks
+
+## **Summary: Why Qodex?**
+
+- Zero manual scripting
+- Auto-healing tests
+- AI-generated security tests
+- Sync to GitHub
+- Run anywhere — web, local, CI/CD
+- Catch regressions early
+- Real-time insights and alerts
+
+## **Need Help?**
+
+📧 Email: [support@qodex.ai](mailto:support@qodex.ai)
+
+📅 Book Demo: [**Cal Link**](https://cal.com/siddhant-mohan/45mins?overlayCalendar=true)
+
+🌐 Platform: [app.qodex.ai](https://www.app.qodex.ai/ai-agent)
