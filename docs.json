@@ -38,12 +38,10 @@
     ]
   },
   "navbar": {
-    "links": [
-      {
-        "type": "button",
-        "label": "Dashboard",
-        "href": "https://www.app.qodex.ai/dashboard"
-      }
-    ]
+    "primary":{
+      "type": "button",
+      "label": "Dashboard",
+      "href": "https://www.app.qodex.ai/dashboard"
+    }
   }
 }
