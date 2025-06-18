@@ -6,10 +6,33 @@
     "primary": "#3B82F6"
   },
   "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Demo Call with CEO",
+          "icon": "phone",
+          "href": "https://cal.com/siddhant-mohan/45mins?duration=45&overlayCalendar=true"
+        },
+        {
+          "anchor": "Blog",
+          "icon": "newspaper",
+          "href": "https://qodex.ai/blog"
+        },
+        {
+          "anchor": "Discord",
+          "icon": "discord",
+          "href": "https://discord.gg/h2tP328g"
+        }
+      ]
+    },
     "groups": [
       {
         "group": "Get Started",
-        "pages": ["introduction", "getting-started", "top-10-OWASP"]
+        "pages": [
+          "introduction",
+          "getting-started",
+          "top-10-OWASP"
+        ]
       }
     ]
   },
