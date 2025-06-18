@@ -1,5 +1,15 @@
 {
-  "title": "Qodex Docs",
-  "description": "Public API and developer documentation",
-  "sidebar": ["introduction", "getting-started", "api-reference"]
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Qodex Docs",
+  "colors": {
+    "primary": "#3B82F6"
+  },
+  "navigation": {
+    "pages": [
+      "introduction",
+      "documenatation",
+      "top-10-OWASP"
+    ]
+  }
 }
