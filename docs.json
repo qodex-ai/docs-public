@@ -16,16 +16,8 @@
   "navbar": {
     "links": [
       {
-        "label": "Demo Call with CEO",
-        "href": "https://cal.com/siddhant-mohan/45mins?duration=45"
-      },
-      {
-        "label": "Blog",
-        "href": "https://qodex.ai/blog"
-      },
-      {
-        "label": "Discord",
-        "href": "https://your-slack-invite-link.com"
+        "label": "Dashboard",
+        "href": "https://www.app.qodex.ai/dashboard"
       }
     ]
   }
