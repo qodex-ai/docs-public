@@ -1,0 +1,81 @@
+---
+title: "API Discovery Agent"
+---
+
+The API Discovery Agent in [Qodex.ai](http://Qodex.ai) helps you quickly map and import your APIs, so you can start generating test scenarios without needing a complete or perfectly maintained API spec.
+
+Many teams struggle with incomplete or outdated documentation — Qodex solves this by providing an agent that:
+
+- Parses and analyzes Swagger, Postman, or live APIs
+- Identifies endpoint relationships and dependencies
+- Tags endpoints by authentication requirements
+- Creates an internal API collection used by the AI agents for test generation
+
+## How API Discovery works?
+
+You can bring APIs into [Qodex.ai](http://Qodex.ai) in three ways:
+
+### Upload API Collection (Swagger or Postman)
+
+- Go to the AI Agent page
+- Use the dropdown in the top-left corner → “Add Collection”
+- Upload one of the following formats:
+  - swagger.json or swagger.yaml
+  - postman_collection.json
+
+The API Discovery Agent will analyze:
+
+- Endpoints and methods
+- URL patterns
+- Authentication
+- Parameters
+- Expected responses
+
+### Auto-discover from code using the Qodex SDK
+
+If you do not have a ready Swagger or Postman file, you can generate one live by using the Qodex Discovery SDK:
+
+```bash
+curl -sSL https://raw.githubusercontent.com/qodex-ai/swagger-bot/refs/heads/main/run.sh -o script.sh && chmod +x script.sh && ./script.sh --project-api-key YOUR_PROJECT_KEY
+```
+
+This will:
+
+- Scan your backend
+- Generate a complete Swagger spec
+- Automatically import it into Qodex
+- Map relationships between APIs and identify auth flows
+
+Frameworks supported:
+
+- Node.js / Express
+- Ruby on Rails
+- Python (Flask / FastAPI)
+- Other REST frameworks
+
+## Select from an Existing Collection
+
+If you’ve already imported APIs previously, simply select from your list of existing collections:
+
+- Go to the AI Agent page
+- Top-left dropdown → select collection
+
+This makes it easy to re-use collections across projects.
+
+## Why use the API Discovery Agent?
+
+- Quickly onboard APIs without spending weeks writing a spec
+- No dependency on static or out-of-date documentation
+- Automatically updates when new endpoints are added (re-run SDK)
+- Provides full context to Qodex’s AI agents for better test generation
+- Enables automated detection of:
+  - Auth flows
+  - Relationships between objects
+  - Common parameters
+  - Potential security issues
+
+## Best Practices:
+
+- The more live API examples provided, the better the AI performs during test generation
+- Run the SDK again when your backend evolves — tests and coverage will auto-update
+- If uploading Postman collections, include environment variables so the Discovery Agent can map them for test generation

@@ -1,0 +1,60 @@
+---
+title: "Test Rules Writing Agent"
+---
+
+Test Rules in [Qodex.ai](http://Qodex.ai) define how your API responses — and the underlying system state — should be validated after each test case.
+
+**The Test Rules Writing Agent makes this extremely flexible:**
+
+You can either use **Suggested Rules**, write your own using **natural language**, or create advanced **custom rules** that validate API behavior _and_ database state.
+
+## Two types of Test Rules
+
+In every test case, under **Test Rules**, you can now select:
+
+1. **Assertion**
+
+   Validate API responses — for example:
+   - Status code is 200
+   - Response body contains user_id
+   - Response time is under 500ms
+   - Error message matches expected string
+2. **DB Validation**
+
+   Validate your backend state — after an API runs, confirm that the database is correct.
+
+   For example:
+   - After creating a user, check the users table for correct values
+   - Confirm the token stored in DB matches response
+   - Validate cascading deletes, triggers, or cross-table relationships
+
+## How to Use:
+
+- Go to any **Test Scenario** → select a test case
+- Scroll to the **Test Rules** section
+- You’ll see a dropdown: **Assertion** or **DB Validation**
+- You can:
+  - Use **Suggested Rules** (AI will suggest common ones)
+  - Or click **Write**, and enter your own — either in natural language or directly in JS
+
+## Why this matters
+
+**Without Qodex’s agent:**
+
+- You’d need to manually script DB checks
+- You’d need to handle auth and connection boilerplate
+- It’s very easy to miss hidden failures (silent DB errors, partial updates, etc.)
+
+**With the agent:**
+
+- You can combine **API response checks** \+ **DB state checks**
+- Easily validate complex backend flows (orders, payments, workflows)
+- Confirm data integrity after each test run
+- Stay confident in both surface API and deep system behavior
+
+## Best Practices
+
+- For critical flows (user creation, auth, payments), always combine **Assertion** \+ **DB Validation**
+- Use **variables** across test steps to handle dynamic data
+- Run **DB validation rules** in CI to catch hidden state bugs before deploy
+- When APIs change, Qodex’s auto-healing will also update your **test rules** — so your validations stay current

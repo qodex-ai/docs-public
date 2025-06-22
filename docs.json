@@ -31,8 +31,19 @@
         "icon": "book-open",
         "pages": [
           "introduction",
-          "getting-started",
-          "top-10-OWASP"
+          "getting-started"
+        ]
+      },
+      {
+        "group": "How To Use Agents",
+        "icon": "book-open",
+        "pages": [
+          "auto-discovery-agent",
+          "test-scenario-creation-agent",
+          "request-data-generation-agent",
+          "test-rules-writing-agent",
+          "auto-healing-agent",
+          "security-test-agent"
         ]
       }
     ]
