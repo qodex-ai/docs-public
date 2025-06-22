@@ -1,0 +1,61 @@
+---
+title: "OWASP Top 10 Tests"
+---
+
+## **How to Run OWASP Top 10 Tests**
+
+You can trigger OWASP testing in two ways:
+
+### From AI Agent:
+
+1. Go to **AI Agent**
+2. Type a prompt like:
+   - _“Run OWASP Top 10 on my APIs”_
+   - _“Test for common API security issues”_
+
+The AI will analyze your endpoints and generate security-focused test scenarios automatically.
+
+## What Qodex Tests - OWASP Coverage
+
+ 1. **Broken Object Level Authorization (BOLA)**
+    - Tests whether users can access or manipulate other users’ data.
+ 2. **Broken User Authentication**
+    - Tests for weak, missing, or improper authentication controls.
+ 3. **Excessive Data Exposure**
+    - Detects overexposed fields or sensitive data in API responses.
+ 4. **Lack of Resource & Rate Limiting**
+    - Tests for missing rate limits and possible DoS vectors.
+ 5. **Broken Function Level Authorization**
+    - Checks whether restricted functionality is exposed to unauthorized users.
+ 6. **Mass Assignment**
+    - Tests whether APIs accept or process unexpected fields.
+ 7. **Injection Attacks**
+    - SQL, NoSQL, command injection testing on inputs.
+ 8. **Security Misconfiguration**
+    - Validates security headers, error responses, CORS, etc.
+ 9. **Improper Assets Management**
+    - Tests for exposed, deprecated or unprotected API versions.
+10. **Insufficient Logging & Monitoring**
+    - Ensures errors, unauthorized access, and abuse attempts are properly logged.
+
+## Why Automate OWASP Testing?
+
+**Without automation:**
+
+- Many teams only test OWASP risks during annual penetration tests.
+- API security gaps can slip through staging and into production.
+- It’s hard to maintain security coverage across fast-changing APIs.
+
+**With Qodex:**
+
+- OWASP tests run continuously — in every test cycle or CI/CD run.
+- Failures are surfaced immediately (Slack, Email, Build Reports).
+- “Fix Me” can auto-heal test scenarios when APIs change.
+- Your team gains constant visibility into API security posture.
+
+## Best Practices:
+
+- Run OWASP Top 10 tests on all new API collections.
+- Add OWASP tests to critical user journeys (auth, payments, PII).
+- Schedule full OWASP test runs weekly in **Test Plans**.
+- Monitor coverage and trends in Dashboards and Build Reports.

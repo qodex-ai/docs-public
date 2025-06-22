@@ -38,12 +38,66 @@
         "group": "How To Use Agents",
         "icon": "book-open",
         "pages": [
-          "auto-discovery-agent",
+          "api-discovery-agent",
           "test-scenario-creation-agent",
           "request-data-generation-agent",
           "test-rules-writing-agent",
           "auto-healing-agent",
           "security-test-agent"
+        ]
+      },
+      {
+        "group": "Test Scenarios",
+        "icon": "book-open",
+        "pages": [
+          "creating-test-scenarios-with-ai",
+          "creating-test-scenarios-maunally",
+          "chaining-api-calls",
+          "using-manual-ai-together",
+          "request-data-generation-ai-manual",
+          "test-rules-writing-ai-manual"
+        ]
+      },
+      {
+        "group": "Run Tests",
+        "icon": "book-open",
+        "pages": [
+          "running-tests-from-qodex-web-app",
+          "running-tests-via-cli",
+          "running-tests-in-cicd",
+          "running-single-test-case",
+          "running-full-test-suite",
+          "running-on-schedule-via-test-plans",
+          "re-running-failed-tests"
+        ]
+      },
+      {
+        "group": "Organizing & Monitoring",
+        "icon": "book-open",
+        "pages": [
+          "test-suites",
+          "test-plans",
+          "dashboards",
+          "build-reports",
+          "slack-email-reports"
+        ]
+      },
+      {
+        "group": "Code & GitHub",
+        "icon": "book-open",
+        "pages": [
+          "viewing-test-code",
+          "syncing-tests-to-github",
+          "local-cli-runner"
+        ]
+      },
+      {
+        "group": "Security & Compliance",
+        "icon": "book-open",
+        "pages": [
+          "owasp-top-10-tests",
+          "custom-security-rules",
+          "penetration-tests"
         ]
       }
     ]

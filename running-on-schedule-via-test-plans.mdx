@@ -1,0 +1,26 @@
+---
+title: "Running on Schedule (via Test Plans)"
+---
+
+You can automate test execution using **Test Plans**:
+
+## Steps:
+
+1. Go to **Test Plans**
+2. Create or edit a Plan
+3. Choose:
+   - Which Test Suites to run
+   - When to run:
+     - Daily
+     - Weekly
+     - On Deploy
+     - Custom (cron-style)
+4. Set up notifications (Slack, Email, Webhook)
+5. Save the Plan — Qodex will now run the tests automatically at the defined times.
+
+## Why
+
+- Continuous monitoring of API health
+- Catches regressions over time — even when no new code is deployed
+- Validates staging environments daily
+- Helps teams ensure uptime and coverage

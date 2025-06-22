@@ -1,0 +1,23 @@
+---
+title: "Running Tests via CLI (Local)"
+---
+
+For developers who want to run tests locally — before pushing code — Qodex provides CLI support.
+
+## Steps:
+
+1. Sync your test cases to GitHub (via **Sync to GitHub**)
+2. Clone the GitHub repo locally
+3. Set up an .env file with environment variables (staging, prod, etc.)
+4. Run the following command:
+
+   ```bash
+   qodex test run --env=.env.staging
+   ```
+
+## What this allows:
+
+- Running tests during local dev
+- Validating API changes before PRs
+- Quickly debugging failed tests
+- Testing branches before merges

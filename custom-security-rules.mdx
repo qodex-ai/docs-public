@@ -1,0 +1,62 @@
+---
+title: "Custom Security Rules"
+---
+
+In addition to automated **OWASP Top 10 testing**, [Qodex.ai](http://Qodex.ai) allows you to define **Custom Security Rules** — so your team can validate security behaviors specific to your product and APIs.
+
+Many API security risks are unique to your business logic — Qodex lets you write tests for these risks just like any other functional test.
+
+## Custom Security Rules:
+
+Custom Security Rules in Qodex can validate:
+
+- Authentication and token behavior
+- Role-based access control
+- Rate limiting
+- Response content for sensitive fields
+- Security headers (CORS, CSP, HSTS)
+- Business logic for abuse prevention
+
+You can add them as:
+
+- **AI-Suggested Rules** — Qodex will propose common security checks based on your API.
+- **Manual Rules** — you can write your own:
+  - In **Plain English** (AI will convert to JS)
+  - In **JavaScript** — for full control
+  - As **DB Validations** — to check for deeper security issues in backend state
+
+## Examples of Custom Security Rules:
+
+- _Token must expire after 30 minutes_
+- _Rate limit exceeded should return 429_
+- _Unauthenticated users must not access this endpoint_
+- _Admin APIs should only be accessible to Admin users_
+- _PII fields must not appear in unauthenticated error messages_
+- _Password reset tokens must be single-use and time-bound_
+- _Response should include correct security headers_
+
+## How to Add Custom Security Rules:
+
+1. Go to any Test Scenario → select a test case
+2. Scroll to **Test Rules** section
+3. Choose:
+   - Suggested Rule (AI)
+   - Or write your own:
+     - Assertion
+     - DB Validation
+4. Save — your custom security rule will run every time this test is executed.
+
+## Best Practices:
+
+- Add Custom Security Rules to your critical user journeys:
+  - Login flows
+  - Payments
+  - Token refresh
+  - Admin APIs
+  - User permissions
+  - Data export / reports
+- Combine **Functional \+ Security Rules** in a single scenario — Qodex supports both.
+- Run Custom Security Rules in:
+  - Manual test runs
+  - Scheduled Plans
+  - CI/CD pipelines

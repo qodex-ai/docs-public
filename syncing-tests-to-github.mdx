@@ -1,0 +1,39 @@
+---
+title: "Syncing Tests to GitHub"
+---
+
+Qodex allows you to sync all tests to your GitHub repo — so they live in version control along with your source code.
+
+## How to sync:
+
+1. Go to **Test Scenarios**
+2. Click **Sync to GitHub**
+3. Select target branch and repo
+4. Tests will be pushed to /tests/qodex/ folder
+
+## Contents of Synced folder:
+
+- YAML files for each test scenario
+- JS files for test rules and DB validations
+- Supporting files for local and CI/CD execution
+
+## Why Sync:
+
+- Review test changes with standard Git workflows (PRs, reviews)
+- Collaborate across engineering, QA, and platform teams
+- Maintain audit trails for test suite evolution
+- Track test changes alongside product changes
+
+## Once Synced:
+
+- Every test scenario is versioned in Git
+- You can see exactly what changed in each commit (diffs)
+- You can revert to previous versions if needed
+- You can branch test development (feature branches, experiments)
+- Test changes follow your code branching model (dev, staging, prod)
+
+**This ensures:**
+
+- Tests stay aligned with your evolving APIs
+- Regression is visible — if coverage drops or test rules change
+- No surprises in CI/CD — tests in Git are what runs in pipelines

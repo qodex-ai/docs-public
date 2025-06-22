@@ -1,0 +1,26 @@
+---
+title: "Chaining API Calls"
+---
+
+Many test scenarios require chaining multiple API calls to simulate a real user flow.
+
+## Examples:
+
+- Login → Get Token → Call Authenticated API
+- Create Object → Update Object → Delete Object
+- User Registration → Email Verification → Login
+
+## In Qodex, you can:
+
+- Let the AI agent auto-detect when chaining is needed
+- Or set up chaining manually:
+  - Select prerequisite calls for each test step
+  - Pass variables (tokens, object IDs) between steps automatically
+  - Validate end-to-end behavior
+
+## Benefits:
+
+- Simulate real user flows
+- Detect regressions across multiple API calls
+- Validate data consistency across chained APIs
+- Works with both functional and security tests

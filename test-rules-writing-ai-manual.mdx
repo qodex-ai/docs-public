@@ -1,0 +1,28 @@
+---
+title: "Test Rules Writing (AI-suggested & Manual)"
+---
+
+Test Rules define how Qodex will validate test results.
+
+## You can write tests in two ways:
+
+1. **AI-Suggested**
+   - Based on your API \+ test case, Qodex suggests relevant checks:
+     - Status code is correct
+     - Response contains required fields
+     - Response time is within limits
+     - Tokens are valid or expired as expected
+     - Error codes are correct for negative cases
+   - You can accept, edit, or delete suggested rules
+2. **Manual Rules**
+   - You can write rules in:
+     - Plain English (AI converts to JavaScript)
+     - JavaScript for full control
+     - DB Validation: Check backend DB state after API runs
+
+## Benefits:
+
+- No coding required for common checks
+- Full flexibility when needed
+- Works with complex nested fields and arrays
+- Lets you validate both API responses and system state

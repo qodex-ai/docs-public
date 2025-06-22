@@ -1,0 +1,28 @@
+---
+title: "Running Tests in CI/CD"
+---
+
+You can easily integrate Qodex into your CI/CD pipeline.
+
+## Qodex works with:
+
+Qodex works with:
+
+- GitHub Actions
+- Jenkins
+- CircleCI
+- GitLab CI
+
+**Example GitHub Actions step:**
+
+```yaml
+- name: Run Qodex Tests
+  run: qodex test run --env=.env.staging
+```
+
+## Why run in CI/CD:
+
+- Automates API testing for every commit
+- Helps enforce quality gates on staging & prod
+- Detects regressions early in the pipeline
+- Prevents untested APIs from reaching production

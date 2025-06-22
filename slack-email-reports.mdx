@@ -1,0 +1,44 @@
+---
+title: "Slack / Email Alerts"
+---
+
+Qodex can notify your team instantly when tests run — so you’re always aware of:
+
+- New test failures
+- API regressions
+- Flaky tests
+- Auto-healed tests
+- Coverage changes
+
+**Types of alerts:**
+
+- Full test run summary (success or failure)
+- New failures since last run
+- “Fix Me” actions performed
+- Coverage dropped below threshold
+- Flaky tests detected
+
+**Where alerts can go:**
+
+- Slack (to any public or private channel)
+- Email (to one or more recipients)
+- Webhook (for integrations with tools like PagerDuty, Microsoft Teams, etc.)
+
+## How to set up Slack/Email Alerts:
+
+1. Go to **Test Plans**
+2. Create or edit a Test Plan
+3. In the Plan **Details tab**, scroll to **Notifications**
+4. Add:
+   - Slack channel
+   - Email addresses
+   - Webhook URL (optional)
+5. Save the Plan — Qodex will now send alerts automatically on every run
+
+## Benefits of Slack/Email Alerts:
+
+- Keeps your entire team in the loop — in the tools they already use
+- Catches regressions early (before they reach production)
+- Helps developers act fast (you don’t have to check Build Reports manually)
+- Gives QA and platform teams better visibility across environments
+- Provides traceability — alerts link directly to Build Reports

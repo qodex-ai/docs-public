@@ -1,0 +1,47 @@
+---
+title: "Build Reports"
+---
+
+Every time you run tests in Qodex — manually, on schedule, or via CI/CD — a **Build Report** is generated.
+
+This gives you full visibility into test results across your APIs, environments, and timeframes.
+
+## What Build Reports include:
+
+- Overall summary:
+  - Total test scenarios run
+  - Number passed
+  - Number failed
+  - Number skipped
+  - Time taken per test
+  - Environment tested (staging, prod, etc.)
+- Scenario-level detail:
+  - Pass/fail status for each test scenario
+  - Grouped by Suite (if applicable)
+  - Linked back to the test case
+- Test case details:
+  - Request sent (method, URL, headers, body)
+  - Response received
+  - Response time
+  - Test Rules applied
+  - Pass/fail for each rule
+  - DB Validation results (if used)
+  - Error messages or diffs (when failures occur)
+- “Fix Me” options:
+  - If a failure is due to an API change (not a bug), Qodex will suggest an automatic fix and offer a **“Fix Me”**button
+  - Clicking “Fix Me” auto-updates the test logic to match the new behavior
+- History:
+  - You can view Build Reports across multiple runs — compare regression trends and track test reliability over time
+
+## Where to find Build Reports:
+
+- **Build Reports** tab in the main navigation
+- Linked directly from Slack/email notifications
+- Auto-generated on every test run — no extra setup required
+
+## Why Build Reports matter:
+
+- Gives you full test visibility — not just pass/fail but “why”
+- Makes debugging faster — request \+ response \+ validation in one place
+- Helps track regression trends and coverage over time
+- “Fix Me” reduces time wasted on maintaining tests after API changes
