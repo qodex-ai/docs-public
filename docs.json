@@ -51,7 +51,7 @@
         "icon": "book-open",
         "pages": [
           "creating-test-scenarios-with-ai",
-          "creating-test-scenarios-maunally",
+          "creating-test-scenarios-manually",
           "chaining-api-calls",
           "using-manual-ai-together",
           "request-data-generation-ai-manual",
