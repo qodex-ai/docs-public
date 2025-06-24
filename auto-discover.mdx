@@ -1,0 +1,30 @@
+---
+title: "Auto-discovering APIs with Qodex SDK"
+---
+
+### If you don’t have an accurate or current spec:
+
+Run the Qodex Discovery SDK on your backend:
+
+```bash
+curl -sSL https://raw.githubusercontent.com/qodex-ai/swagger-bot/refs/heads/main/run.sh -o script.sh && chmod +x script.sh && ./script.sh --project-api-key YOUR_PROJECT_KEY
+```
+
+### **What it does:**
+
+- Scans your live backend
+- Generates a Swagger spec
+- Imports it directly into Qodex
+
+### **Supported frameworks:**
+
+- Node.js / Express
+- Ruby on Rails
+- Python / Flask / FastAPI
+- Other REST frameworks
+
+### **Why use SDK:**
+
+- No manual spec writing
+- Ensures the latest version of your API is always tested
+- Perfect for fast-changing services or microservices

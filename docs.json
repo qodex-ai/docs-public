@@ -47,6 +47,15 @@
         ]
       },
       {
+        "group": "API Discovery",
+        "icon": "book-open",
+        "pages": [
+          "upload-swagger-postman",
+          "auto-discover",
+          "select-existing-collection"
+        ]
+      },
+      {
         "group": "Test Scenarios",
         "icon": "book-open",
         "pages": [
