@@ -6,38 +6,45 @@ Use the API Discovery Agent to quickly import your APIs — so you can start gen
 
 ## 3 Ways to Import
 
-1. **Upload Swagger or Postman**
-   - Go to **AI Agent**
-   - Top-left dropdown → **Add Collection**
-   - Upload:
-     - swagger.json or swagger.yaml
-     - postman_collection.json
+### 
 
-   To learn more, check out: [link]
-2. **Auto-Discover with Qodex SDK**
+### **1. Upload Swagger or Postman**
 
-   If you don’t have a spec:
+- Go to **AI Agent**
+- Top-left dropdown → **Add Collection**
+- Upload:
+  - swagger.json or swagger.yaml
+  - postman_collection.json
 
-   Run this script on your backend:
+To learn more, check out:  [Uploading a Swagger or Postman Collection](https://docs.qodex.ai/upload-swagger-postman)
 
-   ```bash
-   curl -sSL https://raw.githubusercontent.com/qodex-ai/swagger-bot/refs/heads/main/run.sh -o script.sh && chmod +x script.sh && ./script.sh --project-api-key YOUR_PROJECT_KEY
-   ```
+### **2. Auto-Discover with Qodex SDK**
 
-   It will auto-generate a spec from your running app and import it into Qodex.
+If you don’t have a spec:
 
-   Works with:
-   - Node.js / Express
-   - Rails
-   - Flask / FastAPI
-   - Other REST frameworks
+Run this script on your backend:
 
-   To learn more, check out: [link]
-3. **Select an Existing Collection**
-   - In **AI Agent** → dropdown
-   - Select any collection you’ve already imported
+```bash
+curl -sSL https://raw.githubusercontent.com/qodex-ai/swagger-bot/refs/heads/main/run.sh -o script.sh && chmod +x script.sh && ./script.sh --project-api-key YOUR_PROJECT_KEY
+```
 
-   To learn more, check out: [link]
+It will auto-generate a spec from your running app and import it into Qodex.
+
+Works with:
+
+- Node.js / Express
+- Rails
+- Flask / FastAPI
+- Other REST frameworks
+
+To learn more, check out: [Auto-discovering APIs with Qodex SDK](https://docs.qodex.ai/auto-discover)
+
+### **3. Select an Existing Collection**
+
+- In **AI Agent** → dropdown
+- Select any collection you’ve already imported
+
+To learn more, check out: [Selecting an Existing Collection](https://docs.qodex.ai/select-existing-collection)
 
 ### Once imported, your APIs are ready for:
 

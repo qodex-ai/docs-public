@@ -2,65 +2,36 @@
 title: "Test Scenario Creation Agent"
 ---
 
-The Test Scenario Creation Agent is the core of how [Qodex.ai](http://Qodex.ai) helps you move from API definitions to actionable tests. It uses AI to translate natural language prompts into complete test scenarios — with request data, chaining, and validation logic.
+The **Test Scenario Creation Agent** lets you build complete test scenarios by simply describing what you want to test — no scripting needed.
 
-**Rather than manually writing test scripts, you simply tell Qodex what to test. The agent will:**
+## How to use:
 
-- Break the request into multiple test cases
-- Detect and model dependencies between API calls
-- Suggest positive, negative, boundary test cases
-- Handle chaining and prerequisites
-- Generate both functional and security tests
+1. Go to **AI Agent** (default page at app.qodex.ai/ai-agent)
+2. In the chat, type what you want to test:
 
-## How to Use the Test Scenario Creation Agent
+### Examples:
 
-From the AI Agent chat (default landing page), simply describe the test you want to create.
+- _Test login flow with valid and invalid credentials_
+- _Verify user registration and token generation_
+- _Run OWASP Top 10 tests on my APIs_
 
-**Example prompts:**
+### What happens:
 
-- Test login flow with valid and invalid credentials
-- Verify onboarding process for new users
-- Check token expiration and re-authentication
-- Run OWASP tests on all protected routes
+- Qodex will:
+  - Identify relevant endpoints
+  - Create a **Test Scenario**
+  - Auto-chain API calls (if needed)
+  - Generate **Request Data**
+  - Suggest **Test Rules** and **DB Validations**
 
-You can also request tests for specific endpoints or flows.
+### Next steps:
 
-**The agent will analyze the endpoints and generate a set of test scenarios automatically. You can:**
+- Review the generated test
+- Save the scenario
+- It will appear in **Test Scenarios** — ready to run manually or in CI/CD
 
-- Approve and Save
-- Edit or refine the scenarios
-- Add or remove test cases
-- Adjust chaining or dependencies
+### Alternate way:
 
-## What the Agent Generates
+- You can also trigger AI test generation from **Test Scenarios** → **Add New Test Scenario** → **AI Mode**
 
-When you save a test scenario created by the agent, Qodex will:
-
-- Generate a **test scenario** (group of test cases)
-- Auto-populate **request data**
-- Set up **test rules**
-- Detect required **prerequisites** (login, token generation, object creation)
-- Chain API calls together if needed
-- Tag the scenario for future reuse
-
-## Key Features
-
-- Works across any imported collection (Swagger, Postman, or discovered APIs)
-- Understands auth flows and token handling
-- Supports CRUD, flow-based, and edge-case testing
-- Suggests positive, negative, and boundary tests
-- No duplication — remembers previous test cases
-- Can generate OWASP security tests in the same flow
-
-## Where can you use it
-
-- AI Agent chat (create tests from scratch)
-- Test Scenarios page → Add New Test Scenario → Create with AI
-- Anytime you select an endpoint, you can prompt the agent to suggest tests
-
-## Best Practices
-
-- Be specific in your prompts — e.g., “Test user registration with missing email” will yield better results than “Test user”
-- For complex multi-step flows, describe the full flow and Qodex will auto-chain calls
-- Save frequently used scenarios to Suites and Plans for easier automation
-- Combine functional test prompts with OWASP prompts to get both types of coverage
+Refer to the full documentation here: [**Creating Test Scenarios with AI**](https://docs.qodex.ai/creating-test-scenarios-with-ai)
