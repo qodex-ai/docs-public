@@ -2,52 +2,30 @@
 title: "Auto-Healing Agent"
 ---
 
-The Auto-Healing Agent in [Qodex.ai](http://Qodex.ai) is designed to keep your test suite healthy and aligned with your APIs as they evolve.
+The **Auto-healing Agent** keeps your test scenarios in sync as your APIs change — so you don’t waste time fixing broken tests.
 
-**In modern development, APIs are constantly changing:**
+### How it works:
 
-- Response structures evolve
-- New fields are added
-- Status codes or messages shift
-- Authentication flows get updated
+- **When you run tests, Qodex detects if:**
+  - API responses have changed (fields added/removed)
+  - Status codes are different
+  - Tokens or flows are updated
+- **If a change is detected:**
+  - The test will fail
+  - You’ll see a **“Fix Me”** button in **Build Reports**
+  - Clicking **Fix Me** will auto-update the test rules or request data
+  - You can re-run the test immediately
 
-Without auto-healing, these changes would cause test failures, leading to brittle pipelines and constant manual rework.
+### Where to use:
 
-## How Auto Healing Works
+- In **Build Reports** after any failed run
+- Works with manual, scheduled, and CI/CD runs
 
-When you run tests in Qodex:
+### Why use it:
 
-- The platform detects mismatches between your **test rules** and the **current API behavior**
-- If a test fails due to a change (e.g., status code updated, response structure modified), Qodex will:
-  - Capture the difference
-  - Present detailed Failure Analysis and Recommendations
-  - Offer a **Fix Me** option so you can auto-update the affected test rule or scenario
+- Keeps test suites up to date — no stale tests
+- Reduces maintenance overhead
+- Helps prevent false failures after intentional API changes
+- Saves dev and QA time across fast-moving APIs
 
-You stay in control — Qodex will not silently update tests — instead, it allows you to review and confirm changes before applying them.
-
-## Benefits of Auto Healing
-
-- Keeps your test suite aligned with real-world API behavior
-- Reduces manual effort required to maintain tests
-- Helps avoid CI/CD failures caused by expected changes
-- Provides traceability — you can view what changed and why
-- Improves test reliability and reduces false positives
-
-## How to Use it
-
-- When a test run detects a mismatch:
-  - The Failure Report will display **Recommendations**
-  - You can click **Fix Me** to automatically update the test scenario
-  - Changes will be versioned (if syncing with GitHub)
-- This works for:
-  - Status codes
-  - Response bodies
-  - Assertion mismatches
-  - DB Validation mismatches (if enabled)
-
-## Best Practices
-
-- Run full test suites after API changes or new deployments
-- Review and confirm “Fix Me” suggestions regularly
-- Sync test updates to GitHub so your team sees the history
-- Use in combination with Scheduled Test Plans — Qodex will alert you when drift is detected
+---

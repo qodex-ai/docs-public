@@ -2,35 +2,40 @@
 title: "Security Test Agent"
 ---
 
-The Security Test Agent is your AI-driven OWASP and security testing assistant — built directly into Qodex.
+The **Security Test Agent** in [Qodex.ai](http://Qodex.ai) helps you automatically test your APIs for security risks — no manual scripting required.
 
-It can generate 50\+ different security test scenarios across all endpoints, including:
+## How to use:
 
-- Broken Access Control (BOLA)
-- Broken Auth & Session Management
-- Excessive Data Exposure
-- Injection attacks (SQL, NoSQL, Command)
-- Insecure Deserialization
-- Rate limiting / DoS checks
-- Mass Assignment
-- Cross-Origin Resource Sharing (CORS) misconfigurations
-- Insufficient Logging & Monitoring
+### From AI Agent chat:
 
-## How To Use
+- Type: _“Run OWASP Top 10 tests on my APIs”_
+- Or: _“Test login flow with security checks”_
 
-- In AI Agent chat → prompt: **_“Run OWASP Top 10 on my APIs”_**
-- Or when creating any scenario → **_“Test this endpoint for security flaws”_**
+### **From Test Scenarios:**
 
-## Benefits
+- When creating a new test, add:
 
-- No security engineering required
-- Works across all endpoints (public & private)
-- Helps catch common issues BEFORE production
-- Keeps OWASP Top 10 coverage up to date as APIs change
-- Complements your functional test coverage
+  _“Include security tests”_
+- Or add **OWASP tests** to any existing scenario
 
-## Best Practices
+## What the Security Agent tests:
 
-- Run security scans early in staging
-- Schedule full OWASP test runs weekly
-- Use alerts to monitor for new vulnerabilities as APIs evolve
+- OWASP Top 10 API vulnerabilities (BOLA, Broken Auth, Injection, etc.)
+- Token abuse
+- Broken access control
+- Rate limiting
+- Data leakage
+- Misconfigurations
+
+## Why use it:
+
+- Automates security test coverage — no need to write separate security tests
+- Catches issues before pentests or production
+- Runs continuously — not just once a year
+- Keeps security tests versioned alongside your functional tests
+
+## Where to see results:
+
+- Build Reports
+- Dashboards
+- Slack / Email Alerts
