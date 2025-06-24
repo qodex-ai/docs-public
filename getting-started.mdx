@@ -1,81 +1,66 @@
 ---
-title: "Get Started"
+title: "Get Started in 10 Minutes"
 ---
 
-Welcome to [**Qodex.ai**](http://Qodex.ai) — your AI-powered platform to **discover, test, and secure APIs** with zero manual scripting.
+Here’s how to start testing your APIs with [Qodex.ai](http://Qodex.ai) — no manual scripts required:
 
-This guide will help you quickly go from signup to running your first API tests — whether you’re onboarding a new microservice or automating coverage across hundreds of endpoints.
+### 1. Sign Up
 
-## What is Qodex.ai?
+Go to [app.qodex.ai](http://app.qodex.ai) → Create your account → You’ll land in **AI Agent**.
 
-[Qodex.ai](http://Qodex.ai) is an AI-first platform designed to make API testing effortless:
+### 2. Import or Discover your APIs
 
-- Discover APIs — no OpenAPI spec required
-- Auto-generate functional, regression & security tests in plain English
-- Run tests manually, on schedule, or in CI/CD
-- Auto-heal tests as APIs change
-- Sync test code to GitHub
-- Get real-time alerts for failures, security risks & regressions
+\
+In **AI Agent** → top-left dropdown → **Add Collection**:
 
-> No code. No manual test writing. Just describe what you want — Qodex handles the rest.
+- Upload swagger.json, swagger.yaml, or Postman collection
+- OR auto-discover APIs with Qodex SDK:
 
-## Quickstart Steps
+  ```bash
+  curl -sSL https://raw.githubusercontent.com/qodex-ai/swagger-bot/refs/heads/main/run.sh -o script.sh && chmod +x script.sh && ./script.sh --project-api-key YOUR_PROJECT_KEY
+  ```
 
-1. **Sign up**
+For more details: [**API Discovery Agent**](https://docs.qodex.ai/api-discovery-agent)
 
-   Go to [app.qodex.ai](http://app.qodex.ai) → Create your account.
+### 3. Generate Test Scenarios in Chat
 
-   You will land on the **AI Agent page** after login: /ai-agent.
-2. **Import or Discover your APIs**
+In **AI Agent chat** → Type your test prompt:
 
-   In the AI Agent:
+**Examples:**
 
-   → **Add Collection** dropdown (top-left) → Upload:
-   - Swagger (.json or .yaml)
-   - Postman collection (.json)
+- _Test login flow with valid and invalid credentials_
+- _Run OWASP Top 10 tests on my APIs_
+- _Check token expiration and re-authentication flow_
 
-   OR:
+**Qodex will generate:**
 
-   Run Qodex’s SDK to auto-discover live APIs:
+- Test Scenario
+- Test Cases within test scenario
+- Request Data
+- Test Rules
+- API chaining (if needed)
 
-   ```bash
-   curl -sSL https://raw.githubusercontent.com/qodex-ai/swagger-bot/refs/heads/main/run.sh -o script.sh && chmod +x script.sh && ./script.sh --project-api-key YOUR_PROJECT_KEY
-   ```
+For more details: [**Test Scenario Creation Agent**](https://docs.qodex.ai/test-scenario-creation-agent)
 
-   Once imported, your API endpoints will appear in the platform — ready for test generation.
-3. **Generate your First Test**
+### 4. Run Tests
 
-   From the AI Agent chat:
+After saving → Go to **Test Scenarios** (top nav).
 
-   Type something like:
+From here:
 
-   _“Test login flow with valid \+ invalid credentials”_
+- Run a single scenario → Click **Run**
 
-   or
+You’ll see results in **Build** panel on the right as tests run.
 
-   _“Run OWASP Top 10 tests on my APIs”_
+For more details: [**Running Tests from the Qodex Web App**](https://docs.qodex.ai/running-tests-from-qodex-web-app)
 
-   AI will generate test scenarios → you can review and **Save**.
+### 5. View Results
 
-   Tests will now appear under **Test Scenarios** tab.
-4. **Run Tests**
-   - Go to **Test Scenarios** or **Test Suites**
-   - Select active test(s)
-   - Click **Run**
-   - Choose environment (default, staging, prod)
-   - View results in **Build Tab** or **Build Reports**
-5. **Sync with GitHub (Optional but Recommended)**
+Once test run completes → Go to **Build **panel -\> Expand -\> **View Detail**:
 
-   In **Test Scenarios** page:
-   - Click **Sync to GitHub**
-   - Test code is pushed to /tests/qodex/
-   - Now you can run locally or in CI/CD
-6. **Set up Notifications**
-   - Add active Test Scenarios into a Suite
-   - Create a \*\*Test Plan \*\*→ Add suite(s) to a Test Plan
-   - Add Slack / Email / Webhook alerts from the details tab in the right
-   - Stay informed when tests fail or APIs drift
+- View pass/fail
+- See request/response
+- Drill into any failed test
+- If a test failed due to API changes → Click **Fix Me** → Auto-update → Re-run
 
-That’s it, its that easy\!
-
-You’re now ready to start testing your APIs.
+For more details: [**Build Reports**](https://docs.qodex.ai/build-reports)
